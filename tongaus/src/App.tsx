@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import './App.css';
-import Home from "./scenes/home";
-import Admin from "./scenes/admin";
-import Setup from "./scenes/setup";
+import loadable from '@loadable/component'
+
+const Home = loadable(() => import("./scenes/home"));
+const Setup = loadable(() => import("./scenes/setup"));
+const Admin = loadable(() => import("./scenes/admin"));
 
 const App = () => {
   return (
