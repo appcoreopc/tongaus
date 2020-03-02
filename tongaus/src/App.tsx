@@ -1,29 +1,42 @@
 import React from "react";
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import './App.css';
-
+import Home from "./scenes/home";
+import Admin from "./scenes/admin";
+import Setup from "./scenes/setup";
 
 const App = () => {
   return (
     <div className="App">
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/settings">Setup</Link>
+              </li>
+              <li>
+                <Link to="/admin">Admin</Link>
+              </li>
+            </ul>
+          </nav>
 
- 
-    <header className="App-header">
-    <img src={logo} className="App-logo" alt="logo" />
-    <p>
-    Edit <code>src/App.tsx</code> and save to reload.
-    </p>
-    <a
-    className="App-link"
-    href="https://reactjs.org"
-    target="_blank"
-    rel="noopener noreferrer"
-    >
-    Learn React
-    </a>
-    
-    </header>
-
+        <Switch>
+          <Route path="/settings">
+            <Setup />           
+          </Route>
+          <Route path="/admin">     
+             <Admin/>      
+          </Route>
+          <Route path="/">
+            <Home/>           
+          </Route>
+        </Switch>
+      </div>
+    </Router>
 
       </div>
     );
