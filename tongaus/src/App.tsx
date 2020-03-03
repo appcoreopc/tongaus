@@ -1,5 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+
 import './App.css';
 import loadable from '@loadable/component'
 
@@ -13,8 +17,11 @@ const LeftNavigation = loadable(() => import("./components/leftnavigation"));
 
 
 const App = () => {
+
   return (
     <div className="App">
+
+
 
       <TopMessageBar/>
       <TopNavigation/>
