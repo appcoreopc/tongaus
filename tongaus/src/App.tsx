@@ -7,9 +7,16 @@ const Home = loadable(() => import("./scenes/home"));
 const Setup = loadable(() => import("./scenes/setup"));
 const Admin = loadable(() => import("./scenes/admin"));
 
+const TopMessageBar = loadable(() => import("./components/topnavigation/topmessagebar"));
+const TopNavigation = loadable(() => import("./components/topnavigation"));
+
 const App = () => {
   return (
     <div className="App">
+
+      <TopMessageBar/>
+      <TopNavigation/>
+
       <Router>
         <div>
           <nav>
