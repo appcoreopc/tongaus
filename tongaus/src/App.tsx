@@ -9,6 +9,8 @@ const Admin = loadable(() => import("./scenes/admin"));
 
 const TopMessageBar = loadable(() => import("./components/topnavigation/topmessagebar"));
 const TopNavigation = loadable(() => import("./components/topnavigation"));
+const LeftNavigation = loadable(() => import("./components/leftnavigation"));
+
 
 const App = () => {
   return (
@@ -18,20 +20,12 @@ const App = () => {
       <TopNavigation/>
 
       <Router>
+
+      <LeftNavigation/>
+
+     
         <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/settings">Setup</Link>
-              </li>
-              <li>
-                <Link to="/admin">Admin</Link>
-              </li>
-            </ul>
-          </nav>
+        
 
         <Switch>
           <Route path="/settings">

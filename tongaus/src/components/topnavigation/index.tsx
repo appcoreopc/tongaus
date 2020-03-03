@@ -12,7 +12,8 @@ const TopNavigationBar = () => (
                        
        <div className="nav-topbar__logo">
             
-            
+
+               Top navi            
          </div>
               
     </header>
