@@ -1,13 +1,13 @@
-const ORDERPAGELOAD = 'OrderPageLoad';
-const MARKETINGPAGELOAD = 'OrderPageLoad';
-const HOMEPAGELOAD = 'HomePageLoad';
-
+export const ORDERPAGELOAD = 'OrderPageLoad';
+export const MARKETINGPAGELOAD = 'OrderPageLoad';
+export const HOMEPAGELOAD = 'HomePageLoad';
 
 let nextTodoId = 0;
 
 export const HomePage_Load= (text: String) => ({
   type: HOMEPAGELOAD,
   id: nextTodoId++,
+  count : 1,
   text
 })
 

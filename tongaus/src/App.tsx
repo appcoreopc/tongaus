@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-
+import rootReducer from "./components/leftnavigation/reducer";
 
 import './App.css';
 import loadable from '@loadable/component'
@@ -15,40 +15,38 @@ const TopMessageBar = loadable(() => import("./components/topnavigation/topmessa
 const TopNavigation = loadable(() => import("./components/topnavigation"));
 const LeftNavigation = loadable(() => import("./components/leftnavigation"));
 
+const store = createStore(rootReducer);
 
 const App = () => {
 
   return (
-    <div className="App">
 
+    <Provider store={store}>
 
+        <div className="App">
+              <TopMessageBar/>
+              <TopNavigation/>
+              <Router>
 
-      <TopMessageBar/>
-      <TopNavigation/>
+              <LeftNavigation/>        
+                <div>           
 
-      <Router>
+                <Switch>
+                  <Route path="/settings">
+                    <Setup />           
+                  </Route>
+                  <Route path="/admin">     
+                    <Admin/>      
+                  </Route>
+                  <Route path="/">
+                    <Home/>           
+                  </Route>
+                </Switch>
+              </div>
+            </Router>
+          </div>
 
-      <LeftNavigation/>
-
-     
-        <div>
-        
-
-        <Switch>
-          <Route path="/settings">
-            <Setup />           
-          </Route>
-          <Route path="/admin">     
-             <Admin/>      
-          </Route>
-          <Route path="/">
-            <Home/>           
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-
-      </div>
+      </Provider>
     );
   }
   
