@@ -1,6 +1,7 @@
 import React from "react";
+import { connect } from 'react-redux';
 
-const TopNavigationBar = () => (
+const TopNavigationBar = ({dispatch}:any) => (
 
     <header className="messagebar">
                            
@@ -16,7 +17,6 @@ const TopNavigationBar = () => (
        </div>
                   
     </header>
-
 )
 
-export default TopNavigationBar;
+export default connect()(TopNavigationBar);
