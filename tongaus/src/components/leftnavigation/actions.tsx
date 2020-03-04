@@ -1,6 +1,7 @@
 export const ORDERPAGELOAD = 'OrderPageLoad';
 export const MARKETINGPAGELOAD = 'OrderPageLoad';
 export const HOMEPAGELOAD = 'HomePageLoad';
+export const SETTINGSPAGELOAD = 'SettingsPageLoad';
 
 let nextTodoId = 0;
 
@@ -37,7 +38,7 @@ export const App_Page_Load = (text: String) => ({
   })
 
 export const Settings_Page_Load = (text: String) => ({
-    type: 'SettingsPageLoad',
+    type: SETTINGSPAGELOAD,
     id: nextTodoId++,
     text
   })

@@ -1,12 +1,15 @@
-import {HOMEPAGELOAD, MARKETINGPAGELOAD} from "./actions";
+import {HOMEPAGELOAD, MARKETINGPAGELOAD, SETTINGSPAGELOAD} from "./actions";
 
-const LeftNavigationReducer = (state: any = {}, action: any) =>  {
+const LeftNavigationReducer = (state: any = { count : 0}, action: any) =>  {
     switch (action.type) {
         case HOMEPAGELOAD:
           return { ...state, count: state.count + 1 };
         case MARKETINGPAGELOAD:
           return { ...state, count: state.count - 1 };
-        default:
+        case SETTINGSPAGELOAD:
+            return { ...state, count: state.count + 100 };
+  
+          default:
           return state;
       }
     };
