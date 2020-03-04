@@ -1,7 +1,9 @@
 export const ORDERPAGELOAD = 'OrderPageLoad';
-export const MARKETINGPAGELOAD = 'OrderPageLoad';
+export const MARKETINGPAGELOAD = 'MarketingPageLoad';
 export const HOMEPAGELOAD = 'HomePageLoad';
+export const APPPAGELOAD = 'AppPageLoad';
 export const SETTINGSPAGELOAD = 'SettingsPageLoad';
+export const ANALYTICSPAGELOAD = 'AnalyticsPageLoad';
 
 let nextTodoId = 0;
 
@@ -22,17 +24,16 @@ export const Marketing_Page_Load = (text: String) => ({
     type: MARKETINGPAGELOAD,
     id: nextTodoId++,
     text
-  })
-
+})
   
 export const Analytics_Page_Load = (text: String) => ({
-    type: 'AnalyticsPageLoad',
+    type: ANALYTICSPAGELOAD,
     id: nextTodoId++,
     text
-  })
+})
 
 export const App_Page_Load = (text: String) => ({
-    type: 'AppPageLoad',
+    type: APPPAGELOAD,
     id: nextTodoId++,
     text
   })
@@ -41,12 +42,5 @@ export const Settings_Page_Load = (text: String) => ({
     type: SETTINGSPAGELOAD,
     id: nextTodoId++,
     text
-  })
+})
   
-  
-  
-    
-  
-    
-  
-
