@@ -24,8 +24,9 @@ const App = () => {
     <Provider store={store}>
 
         <div className="App">
+
               <TopMessageBar/>
-              <TopNavigation/>
+              <TopNavigation/> 
               <Router>
 
               <LeftNavigation/>        

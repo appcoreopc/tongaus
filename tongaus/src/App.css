@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display : grid;
+
 }
 
 .App-logo {
@@ -37,27 +39,6 @@
   }
 }
 
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #efefef; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-  
-}
-
-.sidenav ul li { 
-   list-style: none;
-}
-
-/* -----
-SVG Icons - svgicons.sparkk.fr
------ */
-
 .svg-icon {
   width: 1em;
   height: 1em;
@@ -74,18 +55,32 @@ SVG Icons - svgicons.sparkk.fr
   stroke-width: 1;
 }
 
-.messagebar {
+.header {
 
-  background-color: #333;
-  overflow: hidden;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  color: #9f9c9c;
+  text-transform: uppercase;
 }
 
-.messagebar a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  margin-left:160px;
+.headerNavigation {
+
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  color: #9f9c9c;
+  text-transform: uppercase;
+}
+
+.sidenav {
+
+  grid-column: 1 / 2;
+  grid-row:  3 / 3;
+}
+
+.workspace { 
+
+  grid-column: 2 / 4;
+  grid-row: 3 ;
+  
+  
 }

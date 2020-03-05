@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const TopNavigationBar = ({dispatch}:any) => (
 
-    <header className="messagebar">
+    <header className="headerNavigation">
                            
       <div className="nav-topbar"/>
                        

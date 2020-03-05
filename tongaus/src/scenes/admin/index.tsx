@@ -2,7 +2,7 @@ import React from "react";
 
 const Admin = () => (
 
-        <div className="App"> 
+        <div className="workspace"> 
                 Admin page
         </div>
         )
