@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from "./components/leftnavigation/reducer";
-import  Footer  from "./components/footer";
 
 import './App.css';
 import loadable from '@loadable/component'
@@ -12,9 +11,10 @@ const Home = loadable(() => import("./scenes/home"));
 const Setup = loadable(() => import("./scenes/setup"));
 const Admin = loadable(() => import("./scenes/admin"));
 
-const TopMessageBar = loadable(() => import("./components/topnavigation/topmessagebar"));
 const TopNavigation = loadable(() => import("./components/topnavigation"));
 const LeftNavigation = loadable(() => import("./components/leftnavigation"));
+const IconNavigation = loadable(() => import("./components/leftnavigation/iconnavigation"));
+const Footer = loadable(() => import("./components/footer"));
 
 const store = createStore(rootReducer);
 
@@ -26,15 +26,14 @@ const App = () => {
 
         <div className="App">
 
-              <TopMessageBar/>
               <TopNavigation/> 
 
+              <IconNavigation />
 
               <Router>
 
               <LeftNavigation/>        
-                <div>           
-
+                <div>   
                 <Switch>
                   <Route path="/settings">
                     <Setup />           
@@ -50,7 +49,7 @@ const App = () => {
             </Router>
 
 
-      <Footer/>
+         <Footer/>
 
 
 

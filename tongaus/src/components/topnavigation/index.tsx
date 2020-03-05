@@ -3,20 +3,19 @@ import { connect } from 'react-redux';
 
 const TopNavigationBar = ({dispatch}:any) => (
 
-   <header className="headerNavigation">
+   <div className="headerNavigation">
                            
-      <div className="nav-topbar"/>
-                       
-       <div className="nav-topbar__logo">
-            
-           <a href="/settings/pricing" className="button pink">Top navigation bar item</a>
-           <a href="/settings/pricing" className="button pink">Top navigation bar item</a>
-           <a href="/settings/pricing" className="button pink">Top navigation bar item</a>
-           <a href="/settings/pricing" className="button pink">Top navigation bar item</a>
-       
-       </div>
+    <p className="logo"><a href="#"><i className="fa fa-file-code-o" aria-hidden="true"></i></a></p>
+    <nav>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      <button>Login</button>
                   
-    </header>
+    </div>
 )
 
 export default connect()(TopNavigationBar);

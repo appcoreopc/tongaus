@@ -1,42 +1,14 @@
+body {
+  background-color: #eee;
+  color: #434344;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+
 .App {
   text-align: center;
-  display : grid;
- 
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  display : grid; 
 }
 
 .svg-icon {
@@ -55,38 +27,79 @@
   stroke-width: 1;
 }
 
-.header {
+.headerNavigation button {
+  border: none;
+  padding: 8px 25px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 1.25rem;
+  background-color: #51bb7b;
+}
+
+.headerNavigation {
 
   grid-column: 1 / 4;
   grid-row: 1 / 2;
   color: #9f9c9c;
   text-transform: uppercase;
   display : flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.headerNavigation {
+.headerNavigation nav ul  { 
+  display: flex;
+  list-style-type: none;
+}
 
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
-  color: #9f9c9c;
-  text-transform: uppercase;
-  display : flex;
+.headerNavigation nav ul li { 
+  margin-right : 15px;
+}
+
+.headerNavigation nav ul li svg { 
+  display : inline;
 }
 
 .sidenav {
-
-  grid-column: 1 / 2;
-  grid-row:  3 / 3;
+  grid-column: 2 / 3;
+  grid-row:  2 / 3;
 }
 
-.workspace { 
+.sidenav ul {
+  list-style-type: none;
+  margin-top: 1rem;
+  text-align: left;
+  padding-left: 8px;
+  font-size:  1rem;
+}
 
+
+.workspace { 
   grid-column: 2 / 4;
   grid-row: 3;    
 }
+
+.workspace p  {
+  font-size: 1rem;
+  margin-bottom: .75rem;
+}
+
 
 .footer { 
   grid-column: 1 / 4;
   grid-row: 6 / 7;
   
 }
+
+.iconSideNav {
+  grid-column: 1 / 2;
+  grid-row:  2 / 3;
+}
+
+.iconSideNav ul {
+  list-style-type: none;
+  margin-top: 1rem;
+  font-size:  1rem;
+}
+
