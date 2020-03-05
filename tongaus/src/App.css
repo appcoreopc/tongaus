@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display : grid;
-
+ 
 }
 
 .App-logo {
@@ -61,6 +61,7 @@
   grid-row: 1 / 2;
   color: #9f9c9c;
   text-transform: uppercase;
+  display : flex;
 }
 
 .headerNavigation {
@@ -69,6 +70,7 @@
   grid-row: 2 / 3;
   color: #9f9c9c;
   text-transform: uppercase;
+  display : flex;
 }
 
 .sidenav {
@@ -80,7 +82,11 @@
 .workspace { 
 
   grid-column: 2 / 4;
-  grid-row: 3 ;
-  
+  grid-row: 3;    
+}
+
+.footer { 
+  grid-column: 1 / 4;
+  grid-row: 6 / 7;
   
 }

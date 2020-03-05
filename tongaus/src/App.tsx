@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from "./components/leftnavigation/reducer";
+import  Footer  from "./components/footer";
 
 import './App.css';
 import loadable from '@loadable/component'
@@ -27,6 +28,8 @@ const App = () => {
 
               <TopMessageBar/>
               <TopNavigation/> 
+
+
               <Router>
 
               <LeftNavigation/>        
@@ -45,7 +48,14 @@ const App = () => {
                 </Switch>
               </div>
             </Router>
+
+
+      <Footer/>
+
+
+
           </div>
+         
 
       </Provider>
     );

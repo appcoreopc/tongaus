@@ -2,7 +2,7 @@ import React from "react";
 
 const Setup = () => (
 
-<div className="App"> 
+<div className="workspace"> 
         Setup page page
 </div>
 )

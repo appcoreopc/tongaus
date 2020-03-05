@@ -96,7 +96,7 @@ const mapDispatchToProps = (dispatch:any) => ({
     loadMarketingPage:() => dispatch(Marketing_Page_Load('')),
     loadAnalyticsPage:() => dispatch(Analytics_Page_Load('')),
     loadAppPage: () => dispatch(App_Page_Load('')),
-    loadSettingPage: () => dispatch(Settings_Page_Load(''))
+    loadSettingsPage: () => dispatch(Settings_Page_Load(''))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(LeftNavigationSection);
