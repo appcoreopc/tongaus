@@ -1,8 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import rootReducer from "./components/leftnavigation/reducer";
+import createSagaMiddleware from 'redux-saga'
+
+
+import mySaga from './components/leftnavigation/navigationService';
+
+
 
 import './App.css';
 import loadable from '@loadable/component'
@@ -16,7 +22,12 @@ const LeftNavigation = loadable(() => import("./components/leftnavigation"));
 const IconNavigation = loadable(() => import("./components/leftnavigation/iconnavigation"));
 const Footer = loadable(() => import("./components/footer"));
 
-const store = createStore(rootReducer);
+// Setting up saga component /
+const sagaMiddleware = createSagaMiddleware()
+
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+
+sagaMiddleware.run(mySaga);
 
 const App = () => {
 

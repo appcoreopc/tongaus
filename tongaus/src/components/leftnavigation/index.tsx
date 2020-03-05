@@ -2,10 +2,14 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import { HomePage_Load, Order_Page_Load, Settings_Page_Load, Marketing_Page_Load, Analytics_Page_Load, App_Page_Load} from "./actions";
 import { connect } from 'react-redux'
+import { statement } from "@babel/template";
 
-const LeftNavigationSection = ({count, loadHomePage, loadSettingsPage, 
+const LeftNavigationSection = ({count, employee, loadHomePage, loadSettingsPage, 
   loadAppPage, loadMarketingPage, loadAnalyticsPage, loadOrderPage}:any) => {
   
+  debugger;
+  console.log(employee);
+
    return <nav className="sidenav">    
         <ul>
             
@@ -26,7 +30,8 @@ const LeftNavigationSection = ({count, loadHomePage, loadSettingsPage,
 }
 
 const mapStateToProps = (state: any) => ({
-    count : state.count
+    count : state.count,
+    employee : state.employee
   })
   
 const mapDispatchToProps = (dispatch:any) => ({

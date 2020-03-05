@@ -1,8 +1,8 @@
 import {HOMEPAGELOAD, ORDERPAGELOAD, MARKETINGPAGELOAD, ANALYTICSPAGELOAD, APPPAGELOAD, SETTINGSPAGELOAD} from "./actions";
 
-const LeftNavigationReducer = (state: any = { count : 0}, action: any) =>  {
+const LeftNavigationReducer = (state: any = { count : 0, employee : []}, action: any) =>  {
     switch (action.type) {
-        case HOMEPAGELOAD:
+        case "HomePageLoad":
           return { ...state, count: state.count + 1 };
         case ORDERPAGELOAD:
             return { ...state, count: state.count + 2 };
@@ -14,7 +14,12 @@ const LeftNavigationReducer = (state: any = { count : 0}, action: any) =>  {
               return { ...state, count: state.count + 5 };
         case SETTINGSPAGELOAD:
             return { ...state, count: state.count + 6 };
-            default:
+        case "USER_FETCH_SUCCEEDED":
+            debugger;
+            console.log(state.employee);
+            return { ...state, employee: action.employee};
+
+        default:
           return state;
       }
     };
