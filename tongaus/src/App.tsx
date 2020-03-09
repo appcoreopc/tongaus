@@ -5,10 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import rootReducer from "./components/leftnavigation/reducer";
 import createSagaMiddleware from 'redux-saga'
 
-
 import mySaga from './components/leftnavigation/navigationService';
-
-
 
 import './App.css';
 import loadable from '@loadable/component'
@@ -21,6 +18,7 @@ const TopNavigation = loadable(() => import("./components/topnavigation"));
 const LeftNavigation = loadable(() => import("./components/leftnavigation"));
 const IconNavigation = loadable(() => import("./components/leftnavigation/iconnavigation"));
 const Footer = loadable(() => import("./components/footer"));
+const DriverPage = loadable(() => import("./scenes/driver/index"));
 
 // Setting up saga component /
 const sagaMiddleware = createSagaMiddleware()
@@ -49,6 +47,11 @@ const App = () => {
                   <Route path="/settings">
                     <Setup />           
                   </Route>
+
+                  <Route path="/driver">
+                    <DriverPage />           
+                  </Route>
+
                   <Route path="/admin">     
                     <Admin/>      
                   </Route>

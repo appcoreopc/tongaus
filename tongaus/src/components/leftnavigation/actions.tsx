@@ -14,7 +14,7 @@ export const HomePage_Load= (text: String) => ({
   text
 })
 
-export const Order_Page_Load = (text: String) => ({
+export const Driver_Page_Load = (text: String) => ({
   type: ORDERPAGELOAD,
   id: nextTodoId++,
   text

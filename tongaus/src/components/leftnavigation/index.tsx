@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import { HomePage_Load, Order_Page_Load, Settings_Page_Load, Marketing_Page_Load, Analytics_Page_Load, App_Page_Load} from "./actions";
+import { HomePage_Load, Driver_Page_Load as Driver_Page_Load, Settings_Page_Load, Marketing_Page_Load, Analytics_Page_Load, App_Page_Load} from "./actions";
 import { connect } from 'react-redux'
 import { statement } from "@babel/template";
 
 const LeftNavigationSection = ({count, employee, loadHomePage, loadSettingsPage, 
-  loadAppPage, loadMarketingPage, loadAnalyticsPage, loadOrderPage}:any) => {
+  loadAppPage, loadMarketingPage, loadAnalyticsPage, loadDriverPage}:any) => {
   
   debugger;
-  console.log(employee);
+  console.log(loadDriverPage);
 
    return <nav className="sidenav">    
         <ul>
@@ -16,7 +16,7 @@ const LeftNavigationSection = ({count, employee, loadHomePage, loadSettingsPage,
              <li>             
               <Link to="/" onClick={()=> loadHomePage()}>Home</Link>  </li>
              <li>                
-                <Link to="/driver" onClick={() => {loadOrderPage('')}}>Drivers</Link></li>
+                <Link to="/driver" onClick={() => loadDriverPage('')}>Drivers</Link></li>
              <li>                          
                 <Link to="/trips" onClick={() => loadMarketingPage('')}>Trips</Link></li> 
              <li>                
@@ -24,7 +24,7 @@ const LeftNavigationSection = ({count, employee, loadHomePage, loadSettingsPage,
              <li>           
                 <Link to="/analytics" onClick={() => loadAppPage('')}>Analytics</Link></li>
             <li>
-                <Link to="/settings" onClick={() => loadSettingsPage('setting page')}>Settings </Link></li>          
+                <Link to="/settings" onClick={() => loadSettingsPage('')}>Settings </Link></li>          
         </ul>
     </nav>
 }
@@ -36,7 +36,7 @@ const mapStateToProps = (state: any) => ({
   
 const mapDispatchToProps = (dispatch:any) => ({
     loadHomePage: () => dispatch(HomePage_Load('')),
-    loadOrderPage:() => dispatch(Order_Page_Load('')),
+    loadDriverPage:() => dispatch(Driver_Page_Load('')),
     loadMarketingPage:() => dispatch(Marketing_Page_Load('')),
     loadAnalyticsPage:() => dispatch(Analytics_Page_Load('')),
     loadAppPage: () => dispatch(App_Page_Load('')),

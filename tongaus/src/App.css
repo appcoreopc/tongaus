@@ -9,6 +9,7 @@ body {
 .App {
   text-align: center;
   display : grid; 
+  grid-template-columns: 80px 120px 
 }
 
 .svg-icon {
@@ -64,6 +65,7 @@ body {
 .sidenav {
   grid-column: 2 / 3;
   grid-row:  2 / 3;
+  
  
 }
 
@@ -96,6 +98,7 @@ body {
 .iconSideNav {
   grid-column: 1 / 2;
   grid-row:  2 / 3;
+  
 }
 
 .iconSideNav ul {
