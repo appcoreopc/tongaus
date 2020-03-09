@@ -16,13 +16,13 @@ const LeftNavigationSection = ({count, employee, loadHomePage, loadSettingsPage,
              <li>             
               <Link to="/" onClick={()=> loadHomePage()}>Home</Link>  </li>
              <li>                
-                <Link to="/orders" onClick={() => {loadOrderPage('')}}>Order</Link></li>
+                <Link to="/driver" onClick={() => {loadOrderPage('')}}>Drivers</Link></li>
              <li>                          
-                <Link to="/marketing" onClick={() => loadMarketingPage('')}>Marketing</Link></li> 
+                <Link to="/trips" onClick={() => loadMarketingPage('')}>Trips</Link></li> 
              <li>                
-                <Link to="/analytics" onClick={() => loadAnalyticsPage()}>Analytics</Link></li>          
+                <Link to="/planning" onClick={() => loadAnalyticsPage()}>Planning</Link></li>          
              <li>           
-                <Link to="/apps" onClick={() => loadAppPage('')}>Apps</Link></li>
+                <Link to="/analytics" onClick={() => loadAppPage('')}>Analytics</Link></li>
             <li>
                 <Link to="/settings" onClick={() => loadSettingsPage('setting page')}>Settings </Link></li>          
         </ul>
