@@ -4,7 +4,8 @@
     font-style: normal;
     font-weight: normal;
     speak: none;
-    
+
+    font-size: 6rem;
     display: inline-block;
     text-decoration: inherit;
     width: 1em;
@@ -34,10 +35,9 @@
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-
 .error {
     color: red;
-  }
+}
 
 .clearfix {
     *zoom: 1;

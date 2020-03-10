@@ -1,36 +1,20 @@
 import React from "react";
-import AppIconCard from "../../components/appIconcard";
+import {DriverAppDeleteIconCard, DriverAddIconCard, DriverUpdateIconCard}  from "../../components/appIconcard";
 import styles from "./driver.module.css";
 
 const DriverPage = () => {
    
-   let driverFeatures = [
-      {
-         title : 'New Driver', 
-         link : '/drivernew'
-      },
-      {
-         title : 'Update Driver', 
-         link : '/driverupdate'
-      },
-      {
-         title : 'Delete Driver', 
-         link : '/driverdelete'
-      },
-   ]
-   
-   let features = driverFeatures.map((a) => 
-   <AppIconCard title={a.title} link={a.link}></AppIconCard>
-   );
-   
    return <div className='workspace'>
-   
-   <div>Driver page </div>      
-   
-    <i className={styles.demoicon}> &#xe800; </i>
-   
-         {features}         
-   </div>
+
+
+         <div>Driver page </div>      
+
+         <DriverAddIconCard title='Add driver' style={styles.demoicon}></DriverAddIconCard>
+         <DriverUpdateIconCard title='Add driver' style={styles.demoicon}></DriverUpdateIconCard>
+         <DriverAppDeleteIconCard title='Add driver' style={styles.demoicon}></DriverAppDeleteIconCard>
+
+
+         </div>
    
 }
 
