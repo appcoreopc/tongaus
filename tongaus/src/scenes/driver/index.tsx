@@ -1,5 +1,6 @@
 import React from "react";
 import AppIconCard from "../../components/appIconcard";
+import styles from "./driver.module.css";
 
 const DriverPage = () => {
    
@@ -26,9 +27,9 @@ const DriverPage = () => {
    
    <div>Driver page </div>      
    
-   <span> 
-   </span>
-   {features}         
+    <i className={styles.demoicon}> &#xe800; </i>
+   
+         {features}         
    </div>
    
 }
