@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createContext} from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -27,52 +27,79 @@ const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
 sagaMiddleware.run(mySaga);
 
+const ThemeContext = createContext('dark');
+
 const App = () => {
-
+  
   return (
-
+    
     <Provider store={store}>
-
-        <div className="App">
-
-              <TopNavigation/> 
-
-              <IconNavigation />
-
-              <Router>
-
-              <LeftNavigation/>        
-                <div>   
-                <Switch>
-                  <Route path="/settings">
-                    <Setup />           
-                  </Route>
-
-                  <Route path="/driver">
-                    <DriverPage />           
-                  </Route>
-
-                  <Route path="/admin">     
-                    <Admin/>      
-                  </Route>
-                  <Route path="/">
-                    <Home/>           
-                  </Route>
-                </Switch>
-              </div>
-            </Router>
-
-
-         <Footer/>
-
-
-
-          </div>
-         
-
-      </Provider>
+    
+    <ThemeContext.Provider value="blue">
+    
+    <div className="App">
+    
+    <TopNavigation/> 
+    <IconNavigation />
+       
+    <Router>
+    
+    <LeftNavigation/>        
+    <div>   
+    <Switch>
+    <Route path="/settings">
+    <Setup />           
+    </Route>
+    
+    <Route path="/driver">
+    <DriverPage />           
+    </Route>
+    
+    <Route path="/admin">     
+    <Admin/>      
+    </Route>
+    <Route path="/">
+    <Home/>           
+    </Route>
+    </Switch>
+    </div>
+    </Router>
+    
+    
+    <Footer/>
+    </div>
+    </ThemeContext.Provider>
+    
+    </Provider>
     );
   }
   
-  export default App;
   
+  export class Outlinecomponent extends React.Component {
+        
+    render() {
+      let value = this.context;
+      console.log(value);
+      console.log(this.context);
+      
+      return <div> 
+      
+      <div> dadfafs</div>
+      
+      <ThemeContext.Consumer> 
+      {(context) => (
+        
+        <div>
+        <p> Name : {context}</p>
+        </div>
+        )}
+        
+        </ThemeContext.Consumer>
+        
+        </div>
+      }
+    }
+    
+    
+    export default App;
+    
