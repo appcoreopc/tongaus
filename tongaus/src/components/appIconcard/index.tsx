@@ -13,18 +13,21 @@ export const DriverAddIconCard = ({title, style}:any) => {
 export const DriverUpdateIconCard = ({title, style}:any) => {
 
  return (
-    <div>
-      <i className={style}>&#xe801; </i>
-         <div>{title}</div>
+    <div className={styles.cardLayout}>
+
+      <div><i className={style}>&#xe801; </i> </div>
+         <div className={styles.cardText}>{title}</div>
     </div>)
 }
 
 export const DriverAppDeleteIconCard = ({title, style}:any) => {
 
     return (
-       <div>
-         <i className={style}>&#xf235;</i>
-            <div>{title}</div>
+       <div className={styles.cardLayout}>
+         <div>
+            <i className={style}>&#xf235;</i>
+         </div>    
+        <div className={styles.cardText}>{title}</div>
        </div>)
    }
 

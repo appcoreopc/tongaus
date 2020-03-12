@@ -1,0 +1,9 @@
+.cardLayout {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardText { 
+  align-items: center;
+  display : flex;
+}
