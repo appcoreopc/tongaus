@@ -8,26 +8,32 @@ import createSagaMiddleware from 'redux-saga'
 import mySaga from './components/leftnavigation/navigationService';
 
 import './App.css';
-import loadable from '@loadable/component'
-
-const Home = loadable(() => import("./scenes/home"));
-const Setup = loadable(() => import("./scenes/setup"));
-const Admin = loadable(() => import("./scenes/admin"));
+import loadable from '@loadable/component';
+import Routes from "./routes//routes";
 
 const TopNavigation = loadable(() => import("./components/topnavigation"));
 const LeftNavigation = loadable(() => import("./components/leftnavigation"));
 const IconNavigation = loadable(() => import("./components/leftnavigation/iconnavigation"));
 const Footer = loadable(() => import("./components/footer"));
-const DriverPage = loadable(() => import("./scenes/driver/index"));
 
-// Setting up saga component /
+// Setting up saga component //
+
 const sagaMiddleware = createSagaMiddleware()
 
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
 sagaMiddleware.run(mySaga);
 
-const ThemeContext = createContext('dark');
+interface Employee { 
+
+   name? : string, 
+   email? : string  
+
+}
+
+var emp = {name : "JEremy", Email : "kepung@gmail.com"}
+
+const ThemeContext = createContext<Employee>(emp);
 
 const App = () => {
   
@@ -35,34 +41,21 @@ const App = () => {
     
     <Provider store={store}>
     
-    <ThemeContext.Provider value="blue">
+    <ThemeContext.Provider value={emp}>
     
     <div className="App">
     
     <TopNavigation/> 
     <IconNavigation />
-       
+
+         
     <Router>
+
+      <Routes></Routes>
+      
     
     <LeftNavigation/>        
-    <div>   
-    <Switch>
-    <Route path="/settings">
-    <Setup />           
-    </Route>
     
-    <Route path="/driver">
-    <DriverPage />           
-    </Route>
-    
-    <Route path="/admin">     
-    <Admin/>      
-    </Route>
-    <Route path="/">
-    <Home/>           
-    </Route>
-    </Switch>
-    </div>
     </Router>
     
     
@@ -73,8 +66,7 @@ const App = () => {
     </Provider>
     );
   }
-  
-  
+    
   export class Outlinecomponent extends React.Component {
         
     render() {
@@ -90,7 +82,7 @@ const App = () => {
       {(context) => (
         
         <div>
-        <p> Name : {context}</p>
+        <p> Name : {context.name}</p>
         </div>
         )}
         

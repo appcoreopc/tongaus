@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 
-const TopNavigationBar = ({dispatch}:any) => (
+const TopNavigationBar = ({isLoggedIn, dispatch}:any) => (
 
    <div className="headerNavigation">
                            
@@ -13,8 +13,9 @@ const TopNavigationBar = ({dispatch}:any) => (
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-      <button>Login</button>
-   
+
+    { isLoggedIn && <button>Login</button> }
+    { !isLoggedIn && <button>Login</button> }
     
     </div>
 )

@@ -6,13 +6,11 @@ const DriverPage = () => {
    
    return <div className='workspace'>
 
-
          <div>Driver page </div>      
 
          <DriverAddIconCard title='Add driver' style={styles.demoicon}></DriverAddIconCard>
          <DriverUpdateIconCard title='Update driver' style={styles.demoicon}></DriverUpdateIconCard>
          <DriverAppDeleteIconCard title='Delete driver' style={styles.demoicon}></DriverAppDeleteIconCard>
-
 
          </div>
    
