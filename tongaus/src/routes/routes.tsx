@@ -23,7 +23,11 @@ const Routes = () => (
       <Route path="/admin">     
           <Admin/>      
       </Route>
-
+       
+      <Route path="/driver">     
+          <Admin/>      
+      </Route>
+       
       <Route path="/">
         <Home/>           
       </Route>

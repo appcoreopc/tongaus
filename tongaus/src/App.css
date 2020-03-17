@@ -5,11 +5,11 @@ body {
   font-weight: 400;
 }
 
-
 .App {
   text-align: center;
   display : grid; 
-  grid-template-columns: 80px 120px 
+  grid-template-columns: 80px 120px;
+  height: 90vh;
 }
 
 .svg-icon {
@@ -28,7 +28,7 @@ body {
   stroke-width: 1;
 }
 
-.headerNavigation button {
+.headernavigation button {
   border: none;
   padding: 8px 25px;
   color: #fff;
@@ -38,8 +38,8 @@ body {
   background-color: #51bb7b;
 }
 
-.headerNavigation {
-
+.headernavigation {
+  
   grid-column: 1 / 4;
   grid-row: 1 / 2;
   color: #9f9c9c;
@@ -49,24 +49,22 @@ body {
   align-items: center;
 }
 
-.headerNavigation nav ul  { 
+.headernavigation nav ul  { 
   display: flex;
   list-style-type: none;
 }
 
-.headerNavigation nav ul li { 
+.headernavigation nav ul li { 
   margin-right : 15px;
 }
 
-.headerNavigation nav ul li svg { 
+.headernavigation nav ul li svg { 
   display : inline;
 }
 
 .sidenav {
   grid-column: 2 / 3;
-  grid-row:  2 / 3;
-  
- 
+  grid-row:  2 / 3; 
 }
 
 .sidenav ul {
@@ -87,20 +85,19 @@ body {
   margin-bottom: .75rem;
 }
 
-
 .footer { 
   grid-column: 1 / 4;
   grid-row: 6 / 7;
   
 }
 
-.iconSideNav {
+.iconsidenav {
   grid-column: 1 / 2;
   grid-row:  2 / 3;
   
 }
 
-.iconSideNav ul {
+.iconsidenav ul {
   list-style-type: none;
   margin-top: 1rem;
   font-size:  1rem;

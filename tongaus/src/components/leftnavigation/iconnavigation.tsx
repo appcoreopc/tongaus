@@ -2,7 +2,7 @@ import React from "react";
 
 const IconNavigation = () => {
 
-    return <nav className="iconSideNav">    
+    return <nav className="iconsidenav">    
         <ul>
              <li>
                <svg className="svg-icon" viewBox="0 0 20 20">

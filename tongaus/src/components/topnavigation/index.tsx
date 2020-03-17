@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const TopNavigationBar = ({isLoggedIn, dispatch}:any) => (
 
-   <div className="headerNavigation">
+   <div className="headernavigation">
                            
     <p className="logo"><a href="#"><i className="fa fa-file-code-o" aria-hidden="true"></i></a></p>
     <nav>
