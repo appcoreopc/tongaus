@@ -6,13 +6,9 @@ import { statement } from "@babel/template";
 
 const LeftNavigationSection = ({count, employee, loadHomePage, loadSettingsPage, 
   loadAppPage, loadMarketingPage, loadAnalyticsPage, loadDriverPage}:any) => {
-  
-  debugger;
-  console.log(loadDriverPage);
-
+ 
    return <nav className="sidenav">    
-        <ul>
-            
+        <ul>            
              <li>             
               <Link to="/" onClick={()=> loadHomePage()}>Home</Link>  </li>
              <li>                
@@ -23,8 +19,7 @@ const LeftNavigationSection = ({count, employee, loadHomePage, loadSettingsPage,
                 <Link to="/planning" onClick={() => loadAnalyticsPage()}>Planning</Link></li>          
              <li>           
                 <Link to="/analytics" onClick={() => loadAppPage('')}>Analytics</Link></li>
-            <li>
-                <Link to="/settings" onClick={() => loadSettingsPage('')}>Settings </Link></li>          
+                
         </ul>
     </nav>
 }

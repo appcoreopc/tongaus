@@ -10,16 +10,16 @@ import mySaga from './components/leftnavigation/navigationService';
 import './App.css';
 import loadable from '@loadable/component';
 import Routes from "./routes//routes";
+import { SettingIcon, SettingText } from "./components/leftnavigation/settingNavigation";
 
 const TopNavigation = loadable(() => import("./components/topnavigation"));
 const LeftNavigation = loadable(() => import("./components/leftnavigation"));
 const IconNavigation = loadable(() => import("./components/leftnavigation/iconnavigation"));
+
 const Footer = loadable(() => import("./components/footer"));
 
 // Setting up saga component //
-
-const sagaMiddleware = createSagaMiddleware()
-
+const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
 sagaMiddleware.run(mySaga);
@@ -50,13 +50,13 @@ const App = () => {
 
          
     <Router>
-
-      <Routes></Routes>
+      <Routes></Routes>         
+      <LeftNavigation/>        
+      <SettingIcon />
+      <SettingText />
       
-    
-    <LeftNavigation/>        
-    
-    </Router>
+
+  </Router>
     
     
     <Footer/>
