@@ -11,6 +11,13 @@ namespace driverapi.Controllers
             return await Task.FromResult(Ok());
         }
 
+       ∏[HttpGet]
+        public async Task<IActionResult> GetDriverList(string query, int start, int end) {
+
+            return await Task.FromResult(Ok());
+        }
+
+
         [HttpPost]
        public async Task<IActionResult> UpateDriver() {
 

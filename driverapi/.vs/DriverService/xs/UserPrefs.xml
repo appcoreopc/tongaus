@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{7F5BE2E3-C673-4B36-AA76-2529066EB9A0}|Default">
+  <MonoDevelop.Ide.ItemProperties.DataProviderService FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataProviderService/Class1.cs">
+    <Files>
+      <File FileName="DataProviderService/Class1.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DriverService" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.DriverApi PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
