@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataProviderService
+namespace DataServiceProvider
 {
     public class Class1
     {
