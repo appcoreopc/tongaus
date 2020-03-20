@@ -1,9 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverApi", "DriverService\driverapi.csproj", "{7F5BE2E3-C673-4B36-AA76-2529066EB9A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverAPI", "DriverService\driverapi.csproj", "{7F5BE2E3-C673-4B36-AA76-2529066EB9A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProviderService", "DataProviderService\DataProviderService.csproj", "{48D069F5-B2AD-43F8-9B91-AF6E3BBE0CF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataServiceProvider", "DataServiceProvider\DataServiceProvider.csproj", "{7F65B63C-51D9-489D-AFCC-7595F00F6918}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +15,9 @@ Global
 		{7F5BE2E3-C673-4B36-AA76-2529066EB9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F5BE2E3-C673-4B36-AA76-2529066EB9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F5BE2E3-C673-4B36-AA76-2529066EB9A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{48D069F5-B2AD-43F8-9B91-AF6E3BBE0CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48D069F5-B2AD-43F8-9B91-AF6E3BBE0CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48D069F5-B2AD-43F8-9B91-AF6E3BBE0CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48D069F5-B2AD-43F8-9B91-AF6E3BBE0CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F65B63C-51D9-489D-AFCC-7595F00F6918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F65B63C-51D9-489D-AFCC-7595F00F6918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F65B63C-51D9-489D-AFCC-7595F00F6918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F65B63C-51D9-489D-AFCC-7595F00F6918}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
